@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+*.sqlite3
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+fam/static/img/xampp-windows-x64-8.2.4-0-VS16-installer.exe

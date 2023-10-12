@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> {% block tittle %}  {% endblock %} </title>
+  <!-- Bootstrap CSS v4.3.1 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <!--Base CSS Link-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <!-- Custom CSS -->
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="{% static 'img/pirata.png' %}">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'main' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'family' %}">Family</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">This Project</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          {% block content %}  {% endblock %}
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+            <h5>CODERHOUSE PROJECT</h5>
+            <p>CODERHOUSE - Actividad N°3</p>
+            <br>
+            <p>
+              This website includes material licensed from flaticon.es | 
+              This website was created as a school assignment (CODERHOUSE | "Actividad N°3 hacia tu proyecto final") and is not intended for commercial use.
+              All content is solely for educational purposes. <br>
+              Also to build this project I got some help from a Youtube video by "Develoteca" <br>
+              So shuot out to Develoteca, noice Django tutorial! :D
+              <br>
+              <br>
+              Tadeo Miranda, 2023
+            </p>
+            </div>
+            <div class="col-md-3">
+            <h5>About Me</h5>
+            <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </div>
+            <div class="col-md-3">
+            <h5>Contact Me</h5>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-envelope"></i>mirandawebless@gmail.com</li>
+            </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+            <p>&copy; Tadeo Miranda. All Rights Reserved. yeyeye</p>
+            </div>
+            <div class="col-md-6">
+            <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>

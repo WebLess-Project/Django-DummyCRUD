@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block tittle %} Home {% endblock %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'create' %}" role="button">Add Member</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Family</h4>
+
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Member</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for family in familys %}
+                    <tr>
+                        <td>{{ family.id }}</td>
+                        <td>{{ family.name }}</td>
+                        <td>{{ family.member }}</td>
+                        <td>
+                            <img src="{{ family.image.url }}" height="125px">
+                        </td>
+                        <td>{{ family.description }}</td>
+                        <td>
+                            <a name="" id="" class="btn btn-info" href="{% url 'update' family.id %}" role="button">Update</a>
+                            |
+                            <a name="" id="" class="btn btn-danger" href="{% url 'delate' family.id %}" role="button">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+        
+        
+    </div>
+</div>
+
+{% endblock %}

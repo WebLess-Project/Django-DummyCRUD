@@ -1,0 +1,5 @@
+Django==3.2.8
+PyMySQL
+Pillow
+pytz
+pathlib
