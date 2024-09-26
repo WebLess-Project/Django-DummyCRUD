@@ -1,4 +1,4 @@
-Django==3.2.8
+Django
 PyMySQL
 Pillow
 pytz
